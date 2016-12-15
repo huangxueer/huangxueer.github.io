@@ -1,0 +1,67 @@
+/**{margin: 0;padding: 0;}
+*/
+body{
+	margin-top: 50px;
+}
+
+ #wrap{
+ 	width: 790px;
+ 	height: 340px;
+ 	border: 1px solid #ccc;
+ 	position: relative;
+ 	margin: 0 auto;
+    overflow: hidden;
+    text-align: center;
+  }
+ #roll{
+ 	position: absolute;
+ 	left: 0;
+    overflow: hidden;
+    width: 9999px;
+ }
+ #roll img{
+ 	float: left;
+ 	width: 790px;
+ 	height:340px;
+ }
+ #left{
+ 	position: absolute;
+ 	top: 140px;
+ 	left: 0;
+ 	width: 25px;
+ 	height: 50px;
+ 	z-index: 5;
+ 	line-height: 50px;
+ 	background: #ccc;
+ 	margin: 0;
+ 	opacity:  0.3;
+ }
+  #right{
+ 	position: absolute;
+ 	top: 140px;
+ 	right: 0;
+ 	width: 25px;
+ 	height: 50px;
+ 	z-index: 5;
+ 	line-height: 50px;
+ 	background: #ccc;
+ 	opacity:  0.3;
+ }
+ #ull{
+ 	position: absolute;
+ 	left: 290px;
+ 	bottom: 10px;
+ 	width: 200px;
+ 	border-radius: 10px;
+ 	list-style: none;
+ 	padding-left: 0px;
+ 	background-color: rgba(255,255,255,0.5);
+ }
+ #ull li{
+ 	float: left;
+ 	width: 15px;
+ 	height: 15px;
+ 	margin: 0 5px;
+  	background: white;
+ 	border-radius: 10px;
+ }

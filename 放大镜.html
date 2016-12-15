@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>放大镜</title>
+	<style>
+		*{margin: 0;padding: 0;}
+		#min_wrap{
+			position: static;
+			width: 350px;
+			height: 350px;
+			border: 1px solid #ccc;
+		}
+		#max_wrap{
+			position: absolute;
+			left: 370px;
+			width: 600px;
+			height: 400px;
+			border: 1px solid #ccc;
+			overflow: hidden;
+			display: none;
+		}
+        #max_wrap img{
+            position: absolute;
+        }
+        #slider{
+        	position: absolute;
+        	top: 0;
+        	left: 0;
+        	width: 170px;
+        	height: 170px;
+        	background: rgba(255,255,0,0.2);
+        	cursor: pointer;
+        	display: none;
+        }
+
+	</style>
+</head>
+<body>
+	<!-- 1. 两张图片，小图和大图
+	     2. 为小图添加移动事件
+	        1.滑块显示/ 大图显示
+	        2.鼠标移动到哪里，滑块就到哪里
+	        3.拿到滑动块在小图中的比例值 
+	     3. 改变大图的移动坐标点-->
+    <div id="min_wrap">
+    	<img src="img/1.jpg" alt="">
+    	<div id="slider"></div>
+    </div>
+    <div id="max_wrap">
+	 	<img src="img/2.jpg" alt="">
+	 </div>
+
+
+	 <script type="text/javascript">
+	 	function magnifier() {
+	 		// 获取元素对象
+	 		var minWrap = document.querySelector('#min_wrap');
+	 		var maxWrap = document.querySelector('#max_wrap');
+	 		var slider = document.querySelector('#slider');
+	 		var maxImg = maxWrap.children[0];
+
+	 		minWrap.onmousemove = function (event) {
+	 			var event = event || window.event;
+	 			// 显示滑块和大图
+	 			slider.style.display = "block";
+	 			maxWrap.style.display = "block";
+
+	 			// 获取鼠标坐标
+	 			var disX = event.clientX - minWrap.offsetLeft;
+	 			var disY = event.clientY - minWrap.offsetTop;
+
+	 			// 滑块的中心对准鼠标坐标
+	 			var x = disX - slider.offsetWidth / 2;
+	 			var y = disY - slider.offsetHeight / 2;
+
+                // 设置移动滑块的移动范围
+                var maxWidth = minWrap.clientWidth - slider.offsetWidth;
+                var maxHeight = minWrap.clientHeight - slider.offsetHeight;
+
+                // 判断
+                if (x >= maxWidth) {
+                	x = maxWidth;
+                }else if (x <=0) {
+                	x = 0;
+                }
+
+                if (y >= maxHeight) {
+                	y = maxHeight;
+                }else if (y <=0) {
+                	y = 0;
+                }
+
+	 			// 赋值
+	 			slider.style.left = x + "px";
+	 			slider.style.top = y + "px";
+
+	 			// 移动滑块的位置相对于可移动区域的比例
+                 var scaleX = x / maxWidth;
+                 var scaleY = y / maxHeight;
+
+                // 改变大图的移动坐标点
+                maxWrap.scrollLeft = scaleX * (maxImg.offsetWidth - maxWrap.clientWidth);
+                maxWrap.scrollTop= scaleY * (maxImg.offsetHeight - maxWrap.clientHeight);
+               }
+               // 鼠标移除，滑块和大图消失
+               minWrap.onmouseleave = function () {
+               	     slider.style.display = "none";
+               	     maxWrap.style.display = "none";
+               }
+	 	}
+        magnifier();
+	 </script>
+</body>
+</html>
