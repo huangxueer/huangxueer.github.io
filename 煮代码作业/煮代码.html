@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title>煮代码</title>
+	<style type="text/css">
+	/* 标签样式初始化 */
+		body{margin:0;padding:0;background:#fff;font-size:14px;font-family:Arial,Helvetica,'STHeiti','Microsoft YaHei','sans-serif'}
+		form,ul,li,p,h1,h2,h3,h4,h5,h6{margin:0;padding:0;}
+		img{border:0;}
+		ul,li{list-style-type:none;}
+		a{color:#00007F;text-decoration:none;}
+		a:hover{text-decoration:none;}
+   /*title*/
+       .title{
+          width: 100%;
+          margin: 0 auto;
+          padding: 0 auto;
+          position: fixed;
+          background: #ffffff;
+          padding-bottom: 15px;
+          border-bottom: 1px solid #e3e3e3;
+        }
+        .div1{
+           max-width: 1100px;
+          margin: 0 auto;/*居中*/
+        }
+        .zi{
+        	font-size: 20px;
+        	color:  #999999;
+        	float: left;
+          margin-top: 10px;
+        }
+        .nav{
+        	font-size: 14px;
+        	color: #999999;
+        	margin-left: 30px;
+        	float: left;
+          margin-top: 15px;
+
+         }
+        .navs{
+        	font-size: 14px;
+        	color: #999999;
+        	float: right;
+          margin-right: 30px;
+          margin-top: 15px;
+        }
+        .boss{
+          width: 100%;
+          position: absolute;
+          margin-top: 49px;
+          z-index: -1;
+        }
+   /*第一部分*/
+       .top{
+        clear:both;
+        max-width: 100%;
+        height: 650px;
+        background-image: url(img/ab.jpg);
+        background-size: 100% 100%;
+        transition: all 5s linear;
+       }
+       .top1{
+        max-width: 1100px;
+        margin: 0 auto;
+       }
+        .zi1{
+          font-size: 50px;
+          color: #ffffff;
+          padding-top: 60px;
+          letter-spacing: 2px;
+                 }
+        .p1{
+          font-size: 20px;
+          color: #ffffff;
+          margin-top: 50px;
+        }
+        .nava{
+          font-size: 30px;
+          font-weight: bold;
+          color: #00cc33;
+          display: block;
+          text-align: center;
+          margin-top: 80px;
+        }
+        .nava:hover{
+          text-decoration: underline;
+        }
+   /*第二部分*/
+
+        .centre{
+          margin-top: 40px;
+          text-align: center;
+          border-top: 1px solid #e3e3e3;
+        }
+        .zi2{
+          font-size: 50px;
+          color: #333333;
+          margin-top: 60px;
+          margin-bottom: 30px;
+        }
+        .navb{
+          color: #00cc33;
+          font-size: 30px;
+          font-weight: bold;
+        }
+        .navb:hover{
+          text-decoration: underline;
+        }
+    /*第三部分*/
+        .centrea{
+          margin-top: 100px;
+          text-align: center;
+          border-bottom: 1px solid #e3e3e3;
+          padding-bottom: 30px;
+          }
+        .img1{
+          max-width: 100%;
+        }
+    /*底部*/
+        .bottom{
+          max-width: 1100px;
+          margin: 0 auto;
+          text-align: center;
+        }
+        .navc{
+          display: inline-block;
+          color: #6f6f70;
+          font-size: 50px;
+          border: 1px solid #e3e3e3;
+          padding: 35px 80px;
+          margin-top: 120px;
+          margin: 40px;
+        }
+        .navc:hover{
+          color: #00cc33;
+          border: 2px solid #00cc33;
+        }
+        .you{
+          width: 100%;
+          margin-top: 70px;
+          padding-bottom: 80px;
+        }
+        .bottomm{
+          width: 100%;
+          margin-bottom: 40px;
+          text-align: center;
+        }
+        .navd{
+          color: #00cc33;
+        }
+        .navd:hover{
+          text-decoration: underline;
+        }
+        .weixin1{width: 50px;height: 50px;
+          background-image: url(img/jia.jpg);
+          background-size: 50px 50px;
+          position: fixed;
+          bottom: 140px;
+          right: 20px;
+          display: none;
+
+        }
+        .weixin2{
+          width: 50px;height: 50px;
+          background-image: url(img/inquire.png);
+          background-size: 50px 50px;
+          position: fixed;
+          bottom: 90px;
+          right: 20px;
+        }
+        .weixin{
+          width: 100px;
+          height: 300px;
+          position: fixed;
+          bottom: 90px;
+          right: 70px;
+          display: none;
+        }
+        .weixin img{
+          width: 100px;height: 100px;
+        }
+        /*----------*/
+       .topnav{
+          margin-top:15px;
+          width: 40px;
+          height:28px;
+          background: #e3e3e3;
+          float: right;
+          border-radius:2px;
+          display: none;
+        }
+        /*--------*/
+        .topnav p{width: 28px;height: 5px; border-bottom:2px solid #808080;margin:0 auto;}
+        .submenu{display:none;}
+        .submenu p{height: 30px;margin: 10px 20px;}
+        .nav1{color: #c0c0c0;}
+        @media(max-width: 767px){
+          .zi{ float: none;
+            text-align: center;
+             }
+          .zi1{
+            text-align: center;
+              }
+          .p1{
+            text-align: center;
+              }
+          .nav{
+            display: none;
+              }
+          .navs{
+            display: none;
+              }
+          .navc{
+            display: block;
+           width: 250px;
+           height: 120px;
+           margin: 0px;
+           padding: 0px;
+           margin: 20px auto;
+           line-height: 120px;
+         }
+          .p2{
+            text-align: center;
+             }
+          .bottomm{text-align: center;font-size: 11px;}
+
+          .topnav{
+            margin-top:-25px;
+            margin-right:10px;
+            width: 40px;
+            height:28px;
+            background: #e3e3e3;
+            float: right;
+            border-radius:2px;
+            display: block;
+          }
+          .submenu{
+            position: absolute;
+            margin-top: 50px;
+            width: 767px;height: 303px;
+            background: #ffffff;
+          }
+        
+	</style>
+</head>
+<body>
+<!-- 标题 -->
+  <div class="title">
+    <div class="div1">
+      <div id="left">
+	     <h1 class="zi">MainCode|煮代码</h1>
+        <a class="nav" href="">博客</a>
+        <a class="nav" href="">难题</a>
+        <a class="nav" href="">讨论</a>
+        <a class="nav" href="">电子书</a>
+        <a class="nav" href="">更多</a>
+      </div>
+     <div id="right">
+       <a class="navs" href="">注册</a>
+       <a class="navs" href="">登录</a>    	
+     </div>
+    </div>
+   <div class="topnav">
+     <p></p>
+     <p></p>
+     <p></p>
+   </div>
+   </div>
+     <div class="submenu">
+       <p><a class="nav1" href="">博客</a></p>
+       <p><a class="nav1" href="">难题</a></p>
+       <p><a class="nav1" href="">讨论</a></p>
+       <p><a class="nav1" href="">电子书</a></p>
+       <p><a class="nav1" href="">更多</a></p>
+       <p><a class="nav1" href="">登录</a></p>
+       <p><a class="nav1" href="">注册</a></p>     
+   </div>
+ <!-- 第一部分 -->
+     <div class="boss">
+     <div class="top">
+     <div class="top1">
+      	<h1 class="zi1">MainCode|煮代码</h1>
+      	<p class="p1">代码不仅是一项技术，更是一门艺术!</p>
+      	<a class="nava" href="">成为代码艺术家，从这里起航！</a>
+      </div>
+     </div>
+<!-- 第二部分 -->
+     <div class="centre">
+      <h1 class="zi2">帮！你找工作</h1>
+      <a class="navb" href="">优选面试题，最新，最美，最优</a>     	
+     </div>
+ <!-- 第三部分 -->
+      <div class="centrea">
+      	<img class="img1" src="img/图.png">
+      </div>
+ <!-- 底部 -->
+      <div class="bottom">
+      <a class="navc" href="">学习</a>
+      <a class="navc" href="">分享</a>
+      <a class="navc" href="">招聘</a>      	
+      </div>
+ <!-- 友情链接-->
+      <div class="you">
+        <div class="p2">友情链接:<a class="navd" href="">爱站长</a>
+        </div>
+      </div>
+      <div class="bottomm">
+         <p>联系方式：ochenkai@163.com 煮代码|MainCode&nbsp &nbsp版权所有:<a class="navd" href="">陈凯</a>&nbsp|&nbsp<a class="navd" href="">秦晓强</a>&nbsp|&nbsp<a class="navd" href="">吴海洋</a>&nbsp|&nbsp<a class="navd" href="">郑建文</a></p>
+         <p>Copyright © 2011-2016 maincode.cn, All Rights Reserved&nbsp &nbsp<a class="navd" href="">京ICP备16021163号</a><img src="img/pic.gif"></p>
+      </div>
+      <div class="weixin" id="ww">
+        <img src="img/qinxiao.jpg">
+        <img src="img/weixin.jpg">
+        <img src="img/wu.jpg">
+      </div>
+      <div class="weixin1"></div>
+      <div class="weixin2" onmouseover="aa()" id="wpp"></div>
+
+</div>
+</body>
+<script>
+    var topnav=document.getElementsByClassName("topnav");
+    var onclick=document.getElementsByClassName("submenu");
+    var a = true;
+    topnav[0].onclick=function () {
+      if (!a) {
+        onclick[0].style.display="none";
+      }
+      else{
+        onclick[0].style.display="block";
+      }
+      a=!a;
+    }
+    var ww=document.getElementById("ww");
+    var wpp=document.getElementById("wpp");
+    function aa(){
+    ww.style.display="block";
+}
+</script>
+</html>
